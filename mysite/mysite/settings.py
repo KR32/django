@@ -25,7 +25,9 @@ SECRET_KEY = 'ezt1fhz2v%b32$pxemz(bpvb$3w+n*ym@8=ldk49*h&x64kapv'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'dev.screel.in'
+]
 
 
 # Application definition
