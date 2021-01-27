@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+# from dateutil.tz import *
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +27,8 @@ SECRET_KEY = 'ezt1fhz2v%b32$pxemz(bpvb$3w+n*ym@8=ldk49*h&x64kapv'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'dev.screel.in'
+    'dev.screel.in',
+    'localhost'
 ]
 
 
@@ -77,9 +79,22 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+
+        'NAME': 'app',
+
+        'USER': 'postgres',
+
+        'PASSWORD': 'postgres',
+
+        'HOST': 'localhost',
+
+        'PORT': '5432',
     }
 }
 
